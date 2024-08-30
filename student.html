@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#F5F5F7]">
+    <div class="bg-white">
+      <div class="container flex items-center justify-between py-5">
+        <a href="student.html" class="img">
+          <img src="img/metsenat.svg" alt="metsenat" />
+        </a>
+        <div class="flex items-center gap-5">
+          <div
+            class="sm:flex gap-5 hidden items-center bg-[#F1F1F3] py-1 pl-5 pr-1 rounded-md"
+          >
+            <p class="font-semibold text-sm">Shohrux</p>
+            <img src="img/icon_profile.svg" alt="profile" />
+          </div>
+          <img class="btn cursor-pointer" src="img/logout.svg" alt="logout">
+        </div>
+      </div>
+    </div>
+    <div class="bg-white/60">
+      <div class="container flex flex-col lg:flex-row items-center justify-between py-6">
+        <ul class="flex flex-col lg:flex-row items-center text-[#3366FF]/60  font-semibold">
+          <li class="">
+            <a href="index.html"
+              class=" py-2 border-2 border-[#E0E7FF] rounded lg:rounded-r-none dashboard uppercase text-xs tracking-wide focus:text-white px-12 ">dashboard</a>
+          </li>
+          <li class="my-4">
+            <a href="sponsor.html"
+              class=" sponsor p-2 uppercase lg:border-r-0 border-2 border-[#E0E7FF] text-xs tracking-wide px-[54px] rounded lg:rounded-none">homiylar</a>
+          </li>
+          <li>
+            <a href="student.html"
+              class="student p-2 active uppercase border-2 border-[#E0E7FF] rounded lg:rounded-l-none text-xs tracking-wide px-[51px]">talabalar</a>
+          </li>
+        </ul>
+        <div class="flex flex-col lg:flex-row items-center gap-3 lg:gap-6">
+          <div class="relative">
+            <input class="bg-[#E8E8E8] p-2 pr-12 pl-12 mt-4 lg:mt-0 outline-none placeholder:text-[#B1B1B8] rounded text-sm"
+              type="text" placeholder="Izlash">
+            <img src="img/search.svg" class="cursor-pointer search_btn absolute top-6 lg:top-2 left-3" alt="search">
+          </div>
+          <div
+            class="flex items-center filter_btn hover:bg-[#3365FC] group duration-300 gap-2.5 bg-[#EDF1FD] cursor-pointer p-2 px-7 rounded">
+            <i class="fa-solid fa-filter text-[#3365FC] group-hover:text-white"></i>
+            <p class="text-[#3365FC] group-hover:text-white text-sm font-medium">Filter</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+          'xs': '300px',
+          'sm': '640px',
+          // => @media (min-width: 640px) { ... }
+
+          'md': '768px',
+          // => @media (min-width: 768px) { ... }
+
+          'lg': '1024px',
+          // => @media (min-width: 1024px) { ... }
+
+          'xl': '1280px',
+          // => @media (min-width: 1280px) { ... }
+
+          '2xl': '1536px',
+        },
+          container: {
+            maxWidth: "1000px",
+            padding: "1rem",
+            center: true,
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="js/student.js"></script>
+  </body>
+</html>
+
+

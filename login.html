@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F5F5F7]">
+    <div class="flex justify-center items-center">
+      <div class="bg-white w-full max-w-[350px] mt-32 p-6 rounded-md">
+        <h1 class="font-bold text-2xl mb-6">Kirish</h1>
+        <form class="form flex flex-col">
+          <label
+            class="font-semibold uppercase tracking-wider text-xs"
+            for="username"
+            >Login</label
+          >
+          <input
+            class="bg-[#E0E7FF]/20 username mt-2 p-2 border border-[#E0E7FF] rounded-md placeholder:text-xs outline-none text-xs"
+            name="username"
+            id="username"
+            type="text"
+            placeholder="Login kiriting"
+          />
+          <span class="mb-1 text-xs text-red-400 mt-1 font-semibold invisible login">login kiriting...</span>
+          <div class="password_wrapper flex flex-col relative mt-1">
+            <label
+            class="font-semibold uppercase tracking-wider text-xs"
+            for="password"
+            >Parol</label
+            >
+            <input
+            class="bg-[#E0E7FF]/20 mt-2 p-2 password border border-[#E0E7FF] rounded-md placeholder:text-xs outline-none text-xs"
+            name="password"
+            id="password"
+            type="password"
+            placeholder="Parol kiriting"
+            />
+            <i class="absolute eye-hidden right-4 top-8 fa-solid fa-eye-slash"></i>
+            <span class="mb-1 text-xs text-red-400 mt-1 font-semibold invisible passwordSpan">password kiriting...</span>
+            <span class="span text-xs mt-2 text-red-500 ml-2"></span>
+          </div>
+          <div
+            class="g-recaptcha mt-2 w-[235px]"
+            data-sitekey="6LeS3r4pAAAAAOtWwsYv1kKgHesCytMtNcCPt8Vw"
+          ></div>
+          <button
+            class="mt-2 bg-blue-600 p-2 text-white rounded-sm hover:bg-blue-700 transation-all duration-200"
+            type="submit"
+          >
+            Kirish
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            'xs': '300px',
+            'sm': '640px',
+            // => @media (min-width: 640px) { ... }
+  
+            'md': '768px',
+            // => @media (min-width: 768px) { ... }
+  
+            'lg': '1024px',
+            // => @media (min-width: 1024px) { ... }
+  
+            'xl': '1280px',
+            // => @media (min-width: 1280px) { ... }
+  
+            '2xl': '1536px',
+          },
+          fontFamily: {
+            'openSans': ["Open Sans", 'sans-serif'],
+          },
+          container: {
+            maxWidth: "1000px",
+            padding: "1rem",
+            center: true,
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#F5F5F7] relative font-openSans">
+  <div class="bg-white">
+    <div class="container flex items-center justify-between py-5">
+      <a href="sponsor.html" class="img">
+        <img src="img/metsenat.svg" alt="metsenat" />
+      </a>
+      <div class="flex items-center gap-5">
+        <div class="md:flex gap-5 hidden items-center bg-[#F1F1F3] py-1 pl-5 pr-1 rounded-md">
+          <p class="font-semibold text-sm">Shohrux</p>
+          <img src="img/icon_profile.svg" alt="profile" />
+        </div>
+        <img class="btn cursor-pointer" src="img/logout.svg" alt="logout">
+      </div>
+    </div>
+  </div>
+  <div class="bg-white/60">
+    <div class="container flex flex-col lg:flex-row items-center justify-between py-6">
+      <ul class="flex flex-col lg:flex-row items-center text-[#3366FF]/60  font-semibold">
+        <li class="">
+          <a href="index.html"
+            class=" py-2 border-2 border-[#E0E7FF] rounded lg:rounded-r-none dashboard uppercase text-xs tracking-wide focus:text-white px-12 ">dashboard</a>
+        </li>
+        <li class="my-4">
+          <a href="sponsor.html"
+            class="active sponsor p-2 uppercase lg:border-r-0 border-2 border-[#E0E7FF] text-xs tracking-wide px-[54px] rounded lg:rounded-none">homiylar</a>
+        </li>
+        <li>
+          <a href="student.html"
+            class="student p-2 uppercase border-2 border-[#E0E7FF] rounded lg:rounded-l-none text-xs tracking-wide px-[51px]">talabalar</a>
+        </li>
+      </ul>
+      <div class="flex flex-col lg:flex-row items-center gap-3 lg:gap-6">
+        <div class="relative">
+          <input
+            class="bg-[#E8E8E8] p-2 pr-12 pl-12 mt-4 lg:mt-0 outline-none placeholder:text-[#B1B1B8] rounded text-sm"
+            type="text" placeholder="Izlash">
+          <img src="img/search.svg" class="cursor-pointer search_btn absolute top-6 lg:top-2 left-3" alt="search">
+        </div>
+        <div
+          class="flex items-center filter_btn hover:bg-[#3365FC] group duration-300 gap-2.5 bg-[#EDF1FD] cursor-pointer p-2 px-7 rounded">
+          <i class="fa-solid fa-filter text-[#3365FC] group-hover:text-white"></i>
+          <p class="text-[#3365FC] group-hover:text-white text-sm font-medium">Filter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modalka -->
+  <div class="modalka hidden absolute w-full top-0 h-screen bg-black/50 flex items-center justify-center">
+    <div class="content bg-white w-full max-w-[580px] rounded-md p-5">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold ">Filter</h2>
+        <img class="mt-1 x-btn cursor-pointer" src="img/x.svg" alt="x">
+      </div>
+      <div class="h-[2px] w-full mt-5 bg-[#F5F5F7]"></div>
+      <div class="mt-5 relative">
+        <img class="absolute top-8 right-4" src="img/down.svg" alt="down">
+        <p class="text-xs text-[#1D1D1F] uppercase font-semibold tracking-wider">ariza holati</p>
+        <select name="" id=""
+          class="bg-[#E0E7FF]/20 border border-[#E0E7FF] p-2  mt-2 rounded-md text-sm text-[#2E384D] appearance-none w-full">
+          <option value="all">Barchasi</option>
+          <option value="yangi">Yangi</option>
+          <option value="Moderatsiya">Moderatsiyada</option>
+          <option value="tasdiqlangan">Tasdiqlangan</option>
+          <option value="bekor">bekor qilingan</option>
+        </select>
+      </div>
+      <div class="my-5">
+        <p class="text-xs text-[#1D1D1F] uppercase font-semibold tracking-wider">homiylik summasi</p>
+        <div class="flex flex-wrap mt-3 text-[#2E384D] font-semibold text-sm gap-2 sumBtn">
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-6 py-2.5 focus:border-2 focus:border-[#2E5BFF]">Barchasi
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">1
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">5
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">7
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">10
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">30
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+          <button
+            class="focus:bg-[#E0E7FF] relative border border-[#E0E7FF] rounded-md px-4 py-2.5 focus:border-2 focus:border-[#2E5BFF]">50
+            000 000 <span class="text-[#2E5BFF] font-normal">UZS</span>
+          </button>
+        </div>
+      </div>
+      <div class="date ">
+        <p class="text-xs text-[#1D1D1F] uppercase font-semibold tracking-wider	">sana</p>
+        <input
+          class="bg-[#E0E7FF]/20 border border-[#E0E7FF] text-[#1D1D1F] rounded-md p-2 w-full max-w-[300px] text-sm mt-3"
+          type="date" value="2024-04-26">
+      </div>
+      <div class="h-[2px] w-full my-6 bg-[#F5F5F7]"></div>
+      <div class="flex items-center justify-end gap-2">
+        <button class="flex border rounded-md  p-2 px-4 border-[#B2B7C1] items-center gap-1 text-sm text-[#B2B7C1]">
+          <img src="img/wide-broom.svg" alt="">
+          Tozalash
+        </button>
+        <button class="flex border rounded-md  p-2 px-4 bg-[#3366FF] items-center gap-1 text-sm text-white">
+          <img src="img/eye_2.svg" alt="">
+          Natijalarni ko'rish
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container flex items-center mt-16 justify-center">
+    <table class="table">
+      <thead class="">
+        <tr class="uppercase text-[#B1B1B8] text-xs text-center tracking-wider">
+          <th class="py-3 font-normal">#</th>
+          <th class="py-3 font-normal">f.i.sh</th>
+          <th class="py-3 font-normal">tel.raqami</th>
+          <th class="py-3 font-normal">Homiylik summasi</th>
+          <th class="py-3 font-normal">Sarflangan summa</th>
+          <th class="py-3 font-normal">Sana</th>
+          <th class="py-3 font-normal">holati</th>
+          <th class="py-3 font-normal">amallar</th>
+        </tr>
+      </thead>
+      <tbody class="text-[#1D1D1F] text-sm tbody">
+
+      </tbody>
+    </table>
+  </div>
+  <div class="flex items-center justify-between container my-5">
+    <div class="flex items-center gap-2.5">
+      <p><span class="count">59 </span>tadan</p>
+      <p>1- <span class="page"> 10 </span>ko'rsatilmoqda </p>
+    </div>
+    <div class="flex items-center">
+      <div>
+        <span class="">Ko'rsatish</span>
+        <select class="mx-3 p-1 border select border-gray-200 rounded" id="">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="list flex items-center pagParent gap-2">
+        <!-- <button>
+          <img class="py-1 left_arrow" src="img/left_vecto.svg" alt="">
+        </button> -->
+        <div class="pagination">
+        </div>
+        <!-- <button>
+          <img class="py-1 right_arrow " src="img/right_vector.svg" alt="">
+        </button> -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'xs': '300px',
+          'sm': '640px',
+          // => @media (min-width: 640px) { ... }
+
+          'md': '768px',
+          // => @media (min-width: 768px) { ... }
+
+          'lg': '1024px',
+          // => @media (min-width: 1024px) { ... }
+
+          'xl': '1280px',
+          // => @media (min-width: 1280px) { ... }
+
+          '2xl': '1536px',
+        },
+        fontFamily: {
+          'openSans': ["Open Sans", 'sans-serif'],
+        },
+        container: {
+          maxWidth: "1000px",
+          padding: "1rem",
+          center: true,
+        },
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js"></script>
+  <script src="js/sponsor.js"></script>
+</body>
+
+</html>
